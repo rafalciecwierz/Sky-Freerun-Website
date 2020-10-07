@@ -1,0 +1,42 @@
+$color-black: #000;
+$color-white: #fff;
+
+$color-primary: #F7BE10;
+$color-secondary: #24424C;
+$color-secondary-light: #F5F6F9;
+
+
+$color-gray-light: #CCCCCC;
+
+$font-primary: 'Roboto', sans-serif;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;   // 1rem = 10px
+}
+body {
+    font-family: $font-primary;
+    color: $color-black;
+    font-weight: $font-weight-normal;
+    line-height: 1.6rem;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 95vh repeat(5,min-content);
+    grid-template-columns: repeat(8, 140px);
+
+}

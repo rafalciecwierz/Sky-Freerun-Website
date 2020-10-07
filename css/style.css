@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  font-weight: 400;
+  line-height: 1.6rem; }
+
+.container {
+  display: grid;
+  grid-template-rows: 95vh repeat(5, min-content);
+  grid-template-columns: repeat(8, 140px); }
