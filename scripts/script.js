@@ -3,8 +3,8 @@ window.addEventListener('load', function(){
         slidesToShow: 1,
         scrollLock: true,
         arrows: {
-            prev: '.glider-prevv',
-            next: '.glider-nextt'
+            prev: '.btn-prev',
+            next: '.btn-next'
         }
     })
 })
