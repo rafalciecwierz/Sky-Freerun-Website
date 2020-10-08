@@ -28,6 +28,25 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center; }
+  .navbar__logo {
+    height: 60px; }
+  .navbar__menu {
+    color: #000;
+    cursor: pointer;
+    font-size: 2.4rem;
+    font-weight: 300;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .navbar__menu-text {
+      margin-right: 1rem; }
+    .navbar__menu:hover .navbar__menu--arrow {
+      transform: rotateZ(180deg) translateY(2px); }
+    .navbar__menu--arrow {
+      transition: .2s all;
+      transform: rotateZ(0deg);
+      transform-origin: center; }
 
 .main {
   display: flex;

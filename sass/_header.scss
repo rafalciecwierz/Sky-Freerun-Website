@@ -7,6 +7,36 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    &__logo{
+        height: 60px;
+    }
+
+    &__menu{
+        color: $color-black;
+        cursor: pointer;
+        font-size: 2.4rem;
+        font-weight: $font-weight-light;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-text{
+            margin-right: 1rem;
+        }
+
+        &:hover  &--arrow {
+            transform: rotateZ(180deg) translateY(2px);
+        }
+
+
+        &--arrow{
+            transition: .2s all;
+            transform: rotateZ(0deg);
+            transform-origin: center;
+        }
+    }
 }
 
 .main{

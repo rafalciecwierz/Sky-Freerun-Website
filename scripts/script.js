@@ -8,3 +8,15 @@ window.addEventListener('load', function(){
         }
     })
 })
+
+// When all thing will load
+
+// window.addEventListener('load', function () {
+//     alert("It's loaded!")
+// });
+
+// document.onreadystatechange = function () {
+//     if (document.readyState === 'complete') {
+//         alert("WHos 1?")
+//     }
+// }
