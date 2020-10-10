@@ -50,4 +50,34 @@ function castShadow(e) {
         `;
 }
 
-hero.addEventListener("mousemove", castShadow);
+
+function handleOrientation(event) {
+    var absolute = event.absolute;
+    var alpha    = event.alpha;
+    var beta     = event.beta;
+    var gamma    = event.gamma;
+
+    // console.log(absolute, alpha, beta, gamma);
+    const width = hero.offsetWidth;
+    const height = hero.offsetHeight;
+    // console.log("Pomiar");
+    // console.table(width,height);
+	let x,y;
+		x =  beta * 20;
+		y =  gamma * 20;
+    console.table(x,y);
+	const xWalk = Math.round((x / width) * walk - walk / 3);
+	const yWalk = Math.round((y / height) * walk - walk / 3);
+	// console.table(xWalk, yWalk);
+	text.style.textShadow = `
+          ${xWalk}px ${yWalk}px 0 rgba(255, 0, 0, 0.7),
+          ${xWalk * -1}px ${yWalk}px 0 rgba(0, 255, 255, 0.7),
+          ${xWalk}px ${yWalk * -1}px 0 rgba(255, 0, 0, 0.3),
+          ${xWalk * -1}px ${yWalk * -1}px 0 rgba(0, 255, 255, 0.3)
+        `;
+
+    // Do stuff with the new orientation data
+}
+
+// hero.addEventListener("mousemove", castShadow);
+window.addEventListener("deviceorientation", handleOrientation, true);
