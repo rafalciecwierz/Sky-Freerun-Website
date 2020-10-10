@@ -54,8 +54,8 @@ function castShadow(e) {
 function handleOrientation(event) {
     var absolute = event.absolute;
     var alpha    = event.alpha;
-    var beta     = event.beta;
-    var gamma    = event.gamma;
+    var beta     = Math.round(event.beta);
+    var gamma    = Math.round(event.gamma);
 
     // console.log(absolute, alpha, beta, gamma);
     const width = hero.offsetWidth;
@@ -76,8 +76,13 @@ function handleOrientation(event) {
           ${xWalk * -1}px ${yWalk * -1}px 0 rgba(0, 255, 255, 0.3)
         `;
 
-    // Do stuff with the new orientation data
 }
 
-// hero.addEventListener("mousemove", castShadow);
-window.addEventListener("deviceorientation", handleOrientation, true);
+//testing if user is on mobile
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    window.addEventListener("deviceorientation", handleOrientation, true);
+} else{
+    hero.addEventListener("mousemove", castShadow);
+}
+
+
