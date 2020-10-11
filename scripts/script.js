@@ -52,8 +52,8 @@ function handleOrientation(event) {
     const width = hero.offsetWidth;
     const height = hero.offsetHeight;
 	let x,y;
-		x =  beta * 10;
-		y =  gamma * 10;
+		x =  beta * 5;
+		y =  gamma * 5;
     console.table(x,y);
 	const xWalk = Math.round((x / width) * walk - walk / 3);
 	const yWalk = Math.round((y / height) * walk - walk / 3);
