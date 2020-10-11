@@ -24,8 +24,7 @@ window.addEventListener("load", function () {
 const hero = document.querySelector("body");
 const text = hero.querySelector(".main__title");
 const walk = 10; // px vale for shadow
-// console.log(hero);
-// console.log(text);
+
 
 function castShadow(e) {
 	const width = hero.offsetWidth;
@@ -53,12 +52,11 @@ function handleOrientation(event) {
     const width = hero.offsetWidth;
     const height = hero.offsetHeight;
 	let x,y;
-		x =  (gamma + 90);
-		y =  (beta + 180);
+		x =  (gamma + 90) * 5;
+		y =  (beta + 180) * 5;
     tempSection.innerHTML = `Beta: ${beta}, Gamma: ${gamma}, Alpha: ${alpha}.`;
 	const xWalk = Math.round((x / width) * walk - walk / 3);
 	const yWalk = Math.round((y / height) * walk - walk / 3);
-	// console.table(xWalk, yWalk);
 	text.style.textShadow = `
           ${xWalk}px ${yWalk}px 0 rgba(255, 0, 0, 0.7),
           ${xWalk * -1}px ${yWalk}px 0 rgba(0, 255, 255, 0.7),
