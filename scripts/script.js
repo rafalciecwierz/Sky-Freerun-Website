@@ -44,9 +44,7 @@ function castShadow(e) {
         `;
 }
 
-let tempSection = document.querySelector(".about-us");
-function handleOrientation(event) {
-    var alpha = Math.round(event.alpha);
+function castShadowMobile(event) {
     var beta = Math.round(event.beta);
     var gamma = Math.round(event.gamma);
     const width = hero.offsetWidth;
@@ -54,7 +52,6 @@ function handleOrientation(event) {
 	let x,y;
 		x =  gamma * 7;
 		y =  beta * 14;
-    tempSection.innerHTML = `Beta: ${beta}, Gamma: ${gamma}, Alpha: ${alpha}.`;
 	const xWalk = Math.round((x / width) * walk - walk / 3);
 	const yWalk = Math.round((y / height) * walk - walk / 3);
 	text.style.textShadow = `
@@ -68,7 +65,7 @@ function handleOrientation(event) {
 
 //testing if user is on mobile
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    window.addEventListener("deviceorientation", handleOrientation, true);
+    window.addEventListener("deviceorientation", castShadowMobile, true);
 } else{
     hero.addEventListener("mousemove", castShadow);
 }
