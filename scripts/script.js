@@ -30,18 +30,13 @@ const walk = 10; // px vale for shadow
 function castShadow(e) {
 	const width = hero.offsetWidth;
     const height = hero.offsetHeight;
-    // console.log("Pomiar");
-    // console.table(width,height);
 	let { offsetX: x, offsetY: y } = e;
-
 	if (this !== e.target) {
 		x =  e.pageX;
 		y =  e.pageY;
 	}
-    // console.table(x,y);
 	const xWalk = Math.round((x / width) * walk - walk / 3);
 	const yWalk = Math.round((y / height) * walk - walk / 3);
-	// console.table(xWalk, yWalk);
 	text.style.textShadow = `
           ${xWalk}px ${yWalk}px 0 rgba(255, 0, 0, 0.7),
           ${xWalk * -1}px ${yWalk}px 0 rgba(0, 255, 255, 0.7),
@@ -52,19 +47,13 @@ function castShadow(e) {
 
 
 function handleOrientation(event) {
-    var absolute = event.absolute;
-    var alpha    = event.alpha;
     var beta     = Math.round(event.beta);
     var gamma    = Math.round(event.gamma);
-
-    // console.log(absolute, alpha, beta, gamma);
     const width = hero.offsetWidth;
     const height = hero.offsetHeight;
-    // console.log("Pomiar");
-    // console.table(width,height);
 	let x,y;
-		x =  beta * 20;
-		y =  gamma * 20;
+		x =  beta * 10;
+		y =  gamma * 10;
     console.table(x,y);
 	const xWalk = Math.round((x / width) * walk - walk / 3);
 	const yWalk = Math.round((y / height) * walk - walk / 3);
