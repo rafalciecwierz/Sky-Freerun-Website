@@ -53,8 +53,8 @@ function handleOrientation(event) {
     const width = hero.offsetWidth;
     const height = hero.offsetHeight;
 	let x,y;
-		x =  (beta + 90) * 5;
-		y =  (gamma + 90) * 5;
+		x =  (gamma + 90);
+		y =  (beta + 180);
     tempSection.innerHTML = `Beta: ${beta}, Gamma: ${gamma}, Alpha: ${alpha}.`;
 	const xWalk = Math.round((x / width) * walk - walk / 3);
 	const yWalk = Math.round((y / height) * walk - walk / 3);
