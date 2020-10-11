@@ -45,16 +45,17 @@ function castShadow(e) {
         `;
 }
 
-
+let tempSection = document.querySelector(".about-us");
 function handleOrientation(event) {
-    var beta     = Math.round(event.beta);
-    var gamma    = Math.round(event.gamma);
+    var alpha = Math.round(event.alpha);
+    var beta = Math.round(event.beta);
+    var gamma = Math.round(event.gamma);
     const width = hero.offsetWidth;
     const height = hero.offsetHeight;
 	let x,y;
-		x =  beta * 5;
-		y =  gamma * 5;
-    console.table(x,y);
+		x =  (beta + 90) * 5;
+		y =  (gamma + 90) * 5;
+    tempSection.innerHTML = `Beta: ${beta}, Gamma: ${gamma}, Alpha: ${alpha}.`;
 	const xWalk = Math.round((x / width) * walk - walk / 3);
 	const yWalk = Math.round((y / height) * walk - walk / 3);
 	// console.table(xWalk, yWalk);
