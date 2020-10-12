@@ -1,9 +1,11 @@
 .about-us{
     margin: 6rem 0;
+
     &__text{
         margin: 5rem 0;
         grid-column: center-start / col-end 4;
         padding: 4rem;
+
     }
 
     &__image{
@@ -12,5 +14,11 @@
         background-size: cover;
         background-position: center;
         border-radius: 20rem 0px 0px 20rem;
+        transition: all .3s;
+
+        &:hover{
+            transform: scale(1.05);
+            border: .5rem solid $color-primary;
+        }
     }
 }
