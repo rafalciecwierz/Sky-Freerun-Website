@@ -8,9 +8,13 @@
   margin: 0 auto;
   position: relative;
   overflow-y: hidden;
+  scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   transform: translateZ(0);
+}
+.glider::-webkit-scrollbar{
+  display: none;
 }
 .glider-track {
   height: 100%;

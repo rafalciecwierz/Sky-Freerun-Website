@@ -17,8 +17,28 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-rows: 95vh repeat(5, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+
+.section__title {
+  margin-bottom: 4rem;
+  font-size: 4.8rem;
+  line-height: 4.8rem;
+  letter-spacing: 0.3rem; }
+  .section__title--primary {
+    color: #F7BE10; }
+
+.section__subtitle {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem; }
+  .section__subtitle--gray {
+    color: #CCCCCC; }
+
+.section__description {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  letter-spacing: 0.2rem; }
 
 .header {
   grid-column: full-start / full-end; }
@@ -54,7 +74,6 @@ body {
   .main__photo {
     position: relative;
     width: 50%;
-    background-color: #ccc;
     border-bottom-right-radius: 20rem;
     overflow: hidden; }
   .main__btn {
@@ -116,3 +135,16 @@ body {
     background-color: #F7BE10;
     border-radius: 250px;
     text-decoration: none; }
+
+.about-us {
+  margin: 6rem 0; }
+  .about-us__text {
+    margin: 5rem 0;
+    grid-column: center-start / col-end 4;
+    padding: 4rem; }
+  .about-us__image {
+    grid-column: col-end 4 / full-end;
+    background-image: url(https://images.unsplash.com/photo-1527114652727-2598c326575f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20rem 0px 0px 20rem; }
