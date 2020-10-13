@@ -36,6 +36,13 @@ body {
     line-height: 1.6rem;
 }
 
+.w-80{
+    width: 80%;
+}
+
+.mb-2{
+    margin-bottom: 2rem;
+}
 .mb-4{
     margin-bottom: 4rem;
 }
@@ -53,7 +60,6 @@ body {
 .section{
 
     &__title{
-        margin-bottom: 4rem;
         font-size: 4.8rem;
         line-height: 4.8rem;
         letter-spacing: 0.3rem;
@@ -62,7 +68,6 @@ body {
             color: $color-primary;
         }
         &--secondary{
-            margin-bottom: 2rem;
             color: $color-secondary;
         }
     }
@@ -86,5 +91,9 @@ body {
         font-size: 1.4rem;
         line-height: 2.1rem;
         letter-spacing: 0.2rem;
+
+        &--right{
+            align-self: flex-end;
+        }
     }
 }
