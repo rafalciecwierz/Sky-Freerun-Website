@@ -70,6 +70,10 @@ body {
         &--secondary{
             color: $color-secondary;
         }
+
+        &--white{
+            color: $color-white;
+        }
     }
 
     &__subtitle{
