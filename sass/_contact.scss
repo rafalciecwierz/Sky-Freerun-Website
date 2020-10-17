@@ -7,9 +7,37 @@
     background-repeat: no-repeat;
     border-radius: 20rem 20rem 0px 0px;
     height: 85vh;
-    &__text{
+    align-items: center;
+
+    &__box{
         grid-column: center-start / col-end 4;
         padding: 6rem;
+    }
+
+
+    &__link{
+        width: 80%;
+        padding: .5rem 1rem;
+        margin: 1rem 0px;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        color: $color-white;
+        text-decoration: none;
+        transition: background-color .4s ease-in-out;
+        &:hover{
+            background-color: rgba($color-white, 0.3);
+        }
+        &:active{
+            transform: translateY(2px);
+        }
+    }
+
+    &__text{
+        margin-left: 1rem;
+        letter-spacing: .3rem;
+        font-size: 1.8rem;
+        font-weight: $font-weight-light;
     }
 
 }

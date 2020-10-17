@@ -217,10 +217,30 @@ body {
   background-position: bottom;
   background-repeat: no-repeat;
   border-radius: 20rem 20rem 0px 0px;
-  height: 85vh; }
-  .contact__text {
+  height: 85vh;
+  align-items: center; }
+  .contact__box {
     grid-column: center-start / col-end 4;
     padding: 6rem; }
+  .contact__link {
+    width: 80%;
+    padding: .5rem 1rem;
+    margin: 1rem 0px;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color .4s ease-in-out; }
+    .contact__link:hover {
+      background-color: rgba(255, 255, 255, 0.3); }
+    .contact__link:active {
+      transform: translateY(2px); }
+  .contact__text {
+    margin-left: 1rem;
+    letter-spacing: .3rem;
+    font-size: 1.8rem;
+    font-weight: 300; }
 
 .footer {
   background-color: #191919;
