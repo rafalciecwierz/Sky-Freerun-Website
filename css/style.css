@@ -211,7 +211,7 @@ body {
 
 .contact {
   margin-top: 12rem;
-  background-image: url("/assets/images/contact.jpg");
+  background-image: url("./assets/images/contact.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: bottom;
