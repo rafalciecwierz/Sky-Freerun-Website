@@ -1,0 +1,17 @@
+.footer{
+    background-color: $color-gray-darkest;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__copy{
+        width: 50%;
+        font-weight: $font-weight-light;
+        font-size: 1.8rem;
+        letter-spacing: .36rem;
+        line-height: 3rem;
+        text-align: center;
+        color: rgba($color-gray-medium, .3)
+    }
+}

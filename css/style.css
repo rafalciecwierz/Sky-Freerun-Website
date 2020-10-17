@@ -219,3 +219,18 @@ body {
   .contact__text {
     grid-column: center-start / col-end 4;
     padding: 6rem; }
+
+.footer {
+  background-color: #191919;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .footer__copy {
+    width: 50%;
+    font-weight: 300;
+    font-size: 1.8rem;
+    letter-spacing: .36rem;
+    line-height: 3rem;
+    text-align: center;
+    color: rgba(187, 187, 187, 0.3); }
