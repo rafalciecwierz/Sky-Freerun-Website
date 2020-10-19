@@ -1,8 +1,32 @@
+.menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20rem;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: -9px 0px 12px 0px rgba(200,200,200,.3);
+    z-index: 5000;
+    transform: translateX(0px);
+    transition: 1s transform cubic-bezier(.56,1.35,.69,1.07);
+
+
+    &--hidden{
+        transform: translateX(300px);
+    }
+}
+
+
 .header {
     grid-column: full-start / full-end;
 }
 
 .navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: $color-white;
+    z-index: 2000;
     height: 8rem;
     display: flex;
     justify-content: space-around;
@@ -26,15 +50,27 @@
             margin-right: 1rem;
         }
 
-        &:hover  &--arrow {
-            transform: rotateZ(180deg) translateY(2px);
+        &__arrow{
+            transition: .3s all .5s;
+            transform: rotateZ(0deg);
+            transform-origin: center;
+
+            &--rotate {
+                transform: rotateZ(180deg) translateY(2px);
+            }
+        }
+
+        &__line-bot, &__line-top{
+            transform: translateX(0px);
+            transition: .3s all;
         }
 
 
-        &--arrow{
-            transition: .2s all;
-            transform: rotateZ(0deg);
-            transform-origin: center;
+        &:hover  &__line-bot{
+            transform: translateX(12px);
+        }
+        &:hover  &__line-top{
+            transform: translateX(-12px);
         }
     }
 }
@@ -42,6 +78,7 @@
 .main{
     display: flex;
     height: calc(95vh - 8rem);
+    margin-top: 8rem;
 
     &__photo{
         position: relative;

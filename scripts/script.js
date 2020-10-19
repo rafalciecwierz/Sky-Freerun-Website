@@ -1,3 +1,4 @@
+// Glider.js window constuction
 window.addEventListener("load", function () {
 	new Glider(document.querySelector(".glider"), {
 		slidesToShow: 1,
@@ -21,6 +22,8 @@ window.addEventListener("load", function () {
 //     }
 // }
 
+
+// HEADER Section
 const hero = document.querySelector("body");
 const text = hero.querySelector(".main__title");
 const walk = 10; // px vale for shadow
@@ -70,4 +73,17 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     hero.addEventListener("mousemove", castShadow);
 }
 
+
+const menu = document.querySelector(".menu");
+const arrow = document.querySelector(".navbar__menu__arrow");
+const hamburger = document.querySelector(".navbar__menu");
+
+function handleClickMenu(event){
+	event.preventDefault();
+	menu.classList.toggle("menu--hidden")
+	arrow.classList.toggle("navbar__menu__arrow--rotate")
+
+}
+
+hamburger.addEventListener("click", handleClickMenu);
 
