@@ -14,6 +14,41 @@
     &--hidden{
         transform: translateX(300px);
     }
+
+    &__header{
+        padding: 2rem;
+    }
+
+    &__list{
+        margin-top: 4rem;
+    }
+}
+
+.nav{
+    &__list{
+        list-style-type: none;
+
+        &-item{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            cursor: pointer;
+
+
+            &:hover .nav__link{
+                color: $color-primary;
+            }
+        }
+    }
+    &__link{
+        padding: 2rem;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        color: $color-black;
+        transition: color .1s ease-in-out;
+        text-decoration: none;
+        text-align: center;
+    }
 }
 
 

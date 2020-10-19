@@ -73,6 +73,29 @@ body {
   transition: 1s transform cubic-bezier(0.56, 1.35, 0.69, 1.07); }
   .menu--hidden {
     transform: translateX(300px); }
+  .menu__header {
+    padding: 2rem; }
+  .menu__list {
+    margin-top: 4rem; }
+
+.nav__list {
+  list-style-type: none; }
+  .nav__list-item {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    cursor: pointer; }
+    .nav__list-item:hover .nav__link {
+      color: #F7BE10; }
+
+.nav__link {
+  padding: 2rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #000;
+  transition: color .1s ease-in-out;
+  text-decoration: none;
+  text-align: center; }
 
 .header {
   grid-column: full-start / full-end; }

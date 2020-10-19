@@ -11,10 +11,28 @@
 <body>
     <div class="menu menu--hidden">
         <div class="menu__header">header</div>
-        <div class="menu__list">List</div>
+        <div class="menu__list">
+            <ul class="nav__list">
+                <li class="nav__list-item">
+                    <a href="#start" class="nav__link">Start</a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="#about" class="nav__link">Kim jesteśmy</a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="#passion" class="nav__link">Nasza pasja</a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="#academy" class="nav__link">Akademia</a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="#contact" class="nav__link">Kontakt</a>
+                </li>
+            </ul>
+        </div>
     </div>
     <!-- HEADER & NAVIGATION -->
-    <header class="header">
+    <header id="start" class="header">
         <nav class="navbar">
             <img src="assets/logo.svg" alt="Logo" class="navbar__logo">
             <a href="#" class="navbar__menu">
@@ -56,7 +74,7 @@
     </header>
 
     <!-- ABOUT US -->
-    <section class="about-us grid-container">
+    <section id="about" class="about-us grid-container">
         <div class="about-us__text">
             <span class="section__subtitle section__subtitle--gray">Kim jesteśmy</span>
             <h2 class="section__title section__title--primary mb-4">Sky Freerun</h2>
@@ -70,7 +88,7 @@
     </section>
 
     <!-- PASSION -->
-    <section class="passion grid-container">
+    <section id="passion" class="passion grid-container">
         <div class="passion__image passion__image--1"></div>
         <div class="passion__text">
             <span class="section__subtitle section__subtitle--primary">Nasza pasja</span>
@@ -87,7 +105,7 @@
         </div>
         <div class="passion__image passion__image--2"></div>
     </section>
-    <section class="academy grid-container">
+    <section id="academy" class="academy grid-container">
         <div class="academy__image"></div>
         <div class="academy__text">
             <span class="section__subtitle section__subtitle--gray">Co robimy</span>
@@ -105,7 +123,7 @@
         </div>
     </section>
 
-    <section class="contact grid-container">
+    <section id="contact" class="contact grid-container">
         <div class="contact__box">
             <h2 class="section__title section__title--white mb-4">Napisz do nas</h2>
             <a href="mailto:team@skyfreerun.com"  class="contact__link">
