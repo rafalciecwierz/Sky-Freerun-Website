@@ -73,10 +73,11 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     hero.addEventListener("mousemove", castShadow);
 }
 
-
+// NAVIGATION MENU FUNCTIONALITY
 const menu = document.querySelector(".menu");
 const arrow = document.querySelector(".navbar__menu__arrow");
 const hamburger = document.querySelector(".navbar__menu");
+const closecloud = document.querySelector(".menu__cloud");
 
 function handleClickMenu(event){
 	event.preventDefault();
@@ -86,4 +87,5 @@ function handleClickMenu(event){
 }
 
 hamburger.addEventListener("click", handleClickMenu);
+closecloud.addEventListener("click", handleClickMenu);
 

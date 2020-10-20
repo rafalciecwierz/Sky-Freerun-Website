@@ -8,7 +8,7 @@
     box-shadow: -9px 0px 12px 0px rgba(200,200,200,.3);
     z-index: 5000;
     transform: translateX(0px);
-    transition: 1s transform cubic-bezier(.56,1.35,.69,1.07);
+    transition: 1s transform cubic-bezier(.56,1.35,.69,1.05);
 
 
     &--hidden{
@@ -17,10 +17,35 @@
 
     &__header{
         padding: 2rem;
+        display: flex;
+        justify-content: start;
+        align-items: center;
     }
 
     &__list{
-        margin-top: 4rem;
+        margin-top: 2rem;
+    }
+
+    &__cloud{
+        width: 5rem;
+        fill: white;
+        transition: fill .3s ease-in-out;
+
+        &:hover{
+            cursor: pointer;
+            fill: $color-primary;
+        }
+
+        &-x1, &-x2{
+            transition: all .3s ease-in-out;
+            transform-origin: center;
+        }
+        &:hover &-x1{
+            transform: rotate(180deg) translateY(-8.1px);
+        }
+        &:hover &-x2{
+            transform: rotate(-180deg) translateY(-8.1px);
+        }
     }
 }
 
