@@ -77,15 +77,35 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 const menu = document.querySelector(".menu");
 const arrow = document.querySelector(".navbar__menu__arrow");
 const hamburger = document.querySelector(".navbar__menu");
-const closecloud = document.querySelector(".menu__cloud-link");
+const closeCloud = document.querySelector(".menu__cloud-link");
+let flag = true;
+
+function handleScroll(){
+	setTimeout(removeMenu, 400);
+}
+function handleClickClose(event){
+	if(event.target != menu && event.target.parentNode !=menu && !flag){
+		setTimeout(removeMenu, 400);
+	}
+	flag = false;
+}
+function removeMenu(){
+	menu.classList.add("menu--hidden");
+	arrow.classList.add("navbar__menu__arrow--rotate");
+	window.removeEventListener("scroll", handleScroll);
+	window.removeEventListener("click", handleClickClose);
+	flag = true;
+}
 
 function handleClickMenu(event){
 	event.preventDefault();
-	menu.classList.toggle("menu--hidden")
-	arrow.classList.toggle("navbar__menu__arrow--rotate")
 
+	menu.classList.remove("menu--hidden");
+	arrow.classList.remove("navbar__menu__arrow--rotate");
+	window.addEventListener("scroll", handleScroll);
+	window.addEventListener("click", handleClickClose);
 }
 
 hamburger.addEventListener("click", handleClickMenu);
-closecloud.addEventListener("click", handleClickMenu);
+closeCloud.addEventListener("click", removeMenu);
 
