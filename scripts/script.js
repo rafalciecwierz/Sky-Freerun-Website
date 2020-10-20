@@ -77,7 +77,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 const menu = document.querySelector(".menu");
 const arrow = document.querySelector(".navbar__menu__arrow");
 const hamburger = document.querySelector(".navbar__menu");
-const closecloud = document.querySelector(".menu__cloud");
+const closecloud = document.querySelector(".menu__cloud-link");
 
 function handleClickMenu(event){
 	event.preventDefault();
