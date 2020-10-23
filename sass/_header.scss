@@ -253,7 +253,7 @@
         &::before{
             content: "";
             position: absolute;
-            background-image: url("/assets/cloud-fill.svg");
+            background-image: url("../assets/cloud-fill.svg");
             background-size: contain;
             background-repeat: no-repeat;
             height: 100px;
@@ -268,7 +268,7 @@
         &::after{
             content: "";
             position: absolute;
-            background-image: url("/assets/cloud-fill.svg");
+            background-image: url("../assets/cloud-fill.svg");
             background-size: contain;
             background-repeat: no-repeat;
             height: 100px;
