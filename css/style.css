@@ -162,7 +162,7 @@ body {
 
 .main {
   display: flex;
-  height: calc(95vh-8rem);
+  height: calc(95vh - 8rem);
   margin-top: 8rem; }
   .main__photo {
     position: relative;
@@ -223,10 +223,47 @@ body {
     padding: 2rem;
     text-align: center;
     font-size: 2.4rem;
-    color: #000;
+    color: #333333;
     background-color: #F7BE10;
     border-radius: 250px;
-    text-decoration: none; }
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: .3s all ease-in-out; }
+    .main .cta-btn:hover {
+      padding: 1.5rem 2rem 2.5rem 2rem;
+      transform: translateY(-5px);
+      box-shadow: 0px 10px 9px -2px rgba(0, 0, 0, 0.3); }
+    .main .cta-btn:active {
+      transition: .05s all linear;
+      box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.3);
+      transform: translateY(0px); }
+    .main .cta-btn::before {
+      content: "";
+      position: absolute;
+      background-image: url("/assets/cloud-fill.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 100px;
+      width: 100px;
+      left: -100%;
+      top: 50%;
+      transition: .4s all ease-in-out; }
+    .main .cta-btn:hover::before {
+      left: -25%; }
+    .main .cta-btn::after {
+      content: "";
+      position: absolute;
+      background-image: url("/assets/cloud-fill.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 100px;
+      width: 100px;
+      right: -100%;
+      top: 50%;
+      transition: .4s all ease-in-out; }
+    .main .cta-btn:hover::after {
+      right: -25%; }
 
 .about-us {
   margin: 6rem 0; }
@@ -324,8 +361,8 @@ body {
   .footer__copy {
     width: 50%;
     font-weight: 300;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     letter-spacing: .36rem;
-    line-height: 3rem;
+    line-height: 2rem;
     text-align: center;
     color: rgba(187, 187, 187, 0.3); }

@@ -143,7 +143,7 @@
 
 .main{
     display: flex;
-    height:  calc(95vh-8rem);
+    height:  calc(95vh - 8rem);
     margin-top: 8rem;
 
     &__photo{
@@ -231,9 +231,56 @@
         padding: 2rem;
         text-align: center;
         font-size: 2.4rem;
-        color: $color-black;
+        color: $color-gray-dark;
         background-color: $color-primary;
         border-radius: 250px;
         text-decoration: none;
+        position: relative;
+        overflow: hidden;
+        transition: .3s all ease-in-out;
+
+        &:hover{
+            padding: 1.5rem 2rem 2.5rem 2rem;
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 9px -2px rgba(0,0,0,0.3);
+        }
+        &:active{
+            transition: .05s all linear;
+            box-shadow: 0px 5px 5px -2px rgba(0,0,0,0.3);
+            transform: translateY(0px);
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            background-image: url("/assets/cloud-fill.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 100px;
+            width: 100px;
+            left: -100%;
+            top: 50%;
+            transition: .4s all ease-in-out;
+        }
+        &:hover::before{
+            left: -25%;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            background-image: url("/assets/cloud-fill.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 100px;
+            width: 100px;
+            right: -100%;
+            top: 50%;
+            transition: .4s all ease-in-out;
+
+        }
+        &:hover::after{
+            right: -25%;
+        }
+
     }
 }
