@@ -109,3 +109,30 @@ function handleClickMenu(event){
 hamburger.addEventListener("click", handleClickMenu);
 closeCloud.addEventListener("click", removeMenu);
 
+
+
+// IO for animate navbar
+const navbar = document.querySelector(".navbar");
+const header = document.querySelector(".header");
+const logo = document.querySelector(".navbar__logo");
+const sectionOneOptions = {
+	rootMargin: "-50% 0% 0% 0%",
+};
+const sectionOneObserver = new IntersectionObserver(
+	(entries, sectionOneObserver) => {
+		entries.forEach((entry) => {
+			if (!entry.isIntersecting){
+				navbar.classList.add("navbar--scrolled");
+				logo.classList.add("navbar__logo--scrolled");
+			}
+			else {
+				navbar.classList.remove("navbar--scrolled");
+				logo.classList.remove("navbar__logo--scrolled");
+			}
+		});
+	},
+	sectionOneOptions
+);
+// For Animated Header when scroll
+sectionOneObserver.observe(header);
+

@@ -58,7 +58,8 @@ body {
 .section__description {
   font-size: 1.4rem;
   line-height: 2.1rem;
-  letter-spacing: 0.2rem; }
+  letter-spacing: 0.2rem;
+  margin-bottom: 2rem; }
   .section__description--right {
     align-self: flex-end; }
 
@@ -132,9 +133,15 @@ body {
   height: 8rem;
   display: flex;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  transition: .3s height ease-in-out; }
+  .navbar--scrolled {
+    height: 6rem; }
   .navbar__logo {
-    height: 60px; }
+    height: 60px;
+    transition: .3s height ease-in-out; }
+    .navbar__logo--scrolled {
+      height: 40px; }
   .navbar__menu {
     color: #000;
     cursor: pointer;
@@ -177,7 +184,14 @@ body {
     background-color: #F7BE10;
     width: 40px;
     height: 40px;
-    border-radius: 50px; }
+    border-radius: 50px;
+    transition: .3s background-color ease;
+    box-shadow: none; }
+    .main__btn:hover {
+      background-color: #edc858; }
+    .main__btn:focus {
+      outline: none;
+      box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.5); }
   .main .btn-next {
     z-index: 100;
     right: 50px;
@@ -218,52 +232,53 @@ body {
     font-weight: 300;
     font-size: 2.4rem;
     line-height: 3rem; }
-  .main .cta-btn {
-    width: 200px;
-    padding: 2rem;
-    text-align: center;
-    font-size: 2.4rem;
-    color: #333333;
-    background-color: #F7BE10;
-    border-radius: 250px;
-    text-decoration: none;
-    position: relative;
-    overflow: hidden;
-    transition: .3s all ease-in-out; }
-    .main .cta-btn:hover {
-      padding: 1.5rem 2rem 2.5rem 2rem;
-      transform: translateY(-5px);
-      box-shadow: 0px 10px 9px -2px rgba(0, 0, 0, 0.3); }
-    .main .cta-btn:active {
-      transition: .05s all linear;
-      box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.3);
-      transform: translateY(0px); }
-    .main .cta-btn::before {
-      content: "";
-      position: absolute;
-      background-image: url("../assets/cloud-fill.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 100px;
-      width: 100px;
-      left: -100%;
-      top: 50%;
-      transition: .4s all ease-in-out; }
-    .main .cta-btn:hover::before {
-      left: -25%; }
-    .main .cta-btn::after {
-      content: "";
-      position: absolute;
-      background-image: url("../assets/cloud-fill.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 100px;
-      width: 100px;
-      right: -100%;
-      top: 50%;
-      transition: .4s all ease-in-out; }
-    .main .cta-btn:hover::after {
-      right: -25%; }
+
+.cta-btn {
+  width: 200px;
+  padding: 2rem;
+  text-align: center;
+  font-size: 2.4rem;
+  color: #333333;
+  background-color: #F7BE10;
+  border-radius: 250px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: .3s all ease-in-out; }
+  .cta-btn:hover {
+    padding: 1.5rem 2rem 2.5rem 2rem;
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 9px -2px rgba(0, 0, 0, 0.3); }
+  .cta-btn:active {
+    transition: .05s all linear;
+    box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.3);
+    transform: translateY(0px); }
+  .cta-btn::before {
+    content: "";
+    position: absolute;
+    background-image: url("../assets/cloud-fill.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+    left: -100%;
+    top: 50%;
+    transition: .4s all ease-in-out; }
+  .cta-btn:hover::before {
+    left: -25%; }
+  .cta-btn::after {
+    content: "";
+    position: absolute;
+    background-image: url("../assets/cloud-fill.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+    right: -100%;
+    top: 50%;
+    transition: .4s all ease-in-out; }
+  .cta-btn:hover::after {
+    right: -25%; }
 
 .about-us {
   margin: 6rem 0; }
@@ -307,7 +322,10 @@ body {
   .academy__text {
     margin: 5rem 0;
     grid-column: col-end 4 / center-end;
-    padding: 4rem; }
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
   .academy__image {
     grid-column: full-start / col-end 4;
     background-image: url("https://images.unsplash.com/photo-1577702310329-f7293ba86b58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2468&q=80");

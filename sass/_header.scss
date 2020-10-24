@@ -97,9 +97,19 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    transition: .3s height ease-in-out;
+
+    &--scrolled{
+        height: 6rem;
+    }
 
     &__logo{
         height: 60px;
+        transition: .3s height ease-in-out;
+
+        &--scrolled{
+            height: 40px;
+        }
     }
 
     &__menu{
@@ -162,6 +172,17 @@
         width: 40px;
         height: 40px;
         border-radius: 50px;
+        transition: .3s background-color ease;
+        box-shadow: none;
+
+        &:hover{
+            background-color: #edc858;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0px 0px 5px 5px rgba(255,255,255,.5);
+        }
     }
 
     .btn-next{
@@ -169,6 +190,7 @@
         right: 50px;
         bottom: 150px;
     }
+
 
     .btn-prev{
         z-index: 100;
@@ -226,61 +248,63 @@
         line-height: 3rem;
     }
 
-    .cta-btn{
-        width: 200px;
-        padding: 2rem;
-        text-align: center;
-        font-size: 2.4rem;
-        color: $color-gray-dark;
-        background-color: $color-primary;
-        border-radius: 250px;
-        text-decoration: none;
-        position: relative;
-        overflow: hidden;
-        transition: .3s all ease-in-out;
 
-        &:hover{
-            padding: 1.5rem 2rem 2.5rem 2rem;
-            transform: translateY(-5px);
-            box-shadow: 0px 10px 9px -2px rgba(0,0,0,0.3);
-        }
-        &:active{
-            transition: .05s all linear;
-            box-shadow: 0px 5px 5px -2px rgba(0,0,0,0.3);
-            transform: translateY(0px);
-        }
+}
 
-        &::before{
-            content: "";
-            position: absolute;
-            background-image: url("../assets/cloud-fill.svg");
-            background-size: contain;
-            background-repeat: no-repeat;
-            height: 100px;
-            width: 100px;
-            left: -100%;
-            top: 50%;
-            transition: .4s all ease-in-out;
-        }
-        &:hover::before{
-            left: -25%;
-        }
-        &::after{
-            content: "";
-            position: absolute;
-            background-image: url("../assets/cloud-fill.svg");
-            background-size: contain;
-            background-repeat: no-repeat;
-            height: 100px;
-            width: 100px;
-            right: -100%;
-            top: 50%;
-            transition: .4s all ease-in-out;
+.cta-btn{
+    width: 200px;
+    padding: 2rem;
+    text-align: center;
+    font-size: 2.4rem;
+    color: $color-gray-dark;
+    background-color: $color-primary;
+    border-radius: 250px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: .3s all ease-in-out;
 
-        }
-        &:hover::after{
-            right: -25%;
-        }
+    &:hover{
+        padding: 1.5rem 2rem 2.5rem 2rem;
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 9px -2px rgba(0,0,0,0.3);
+    }
+    &:active{
+        transition: .05s all linear;
+        box-shadow: 0px 5px 5px -2px rgba(0,0,0,0.3);
+        transform: translateY(0px);
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        background-image: url("../assets/cloud-fill.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 100px;
+        width: 100px;
+        left: -100%;
+        top: 50%;
+        transition: .4s all ease-in-out;
+    }
+    &:hover::before{
+        left: -25%;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        background-image: url("../assets/cloud-fill.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 100px;
+        width: 100px;
+        right: -100%;
+        top: 50%;
+        transition: .4s all ease-in-out;
 
     }
+    &:hover::after{
+        right: -25%;
+    }
+
 }
