@@ -75,12 +75,16 @@
         font-size: 1.8rem;
         text-transform: uppercase;
         color: $color-black;
-        transition: color .1s ease-in-out;
+        transition: all .1s ease-in-out;
+        font-weight: $font-weight-light;
         text-decoration: none;
         text-align: center;
     }
 }
-
+.active{
+    color: $color-primary;
+    font-weight: $font-weight-normal;
+}
 
 .header {
     grid-column: full-start / full-end;

@@ -116,9 +116,14 @@ body {
   font-size: 1.8rem;
   text-transform: uppercase;
   color: #000;
-  transition: color .1s ease-in-out;
+  transition: all .1s ease-in-out;
+  font-weight: 300;
   text-decoration: none;
   text-align: center; }
+
+.active {
+  color: #F7BE10;
+  font-weight: 400; }
 
 .header {
   grid-column: full-start / full-end;
