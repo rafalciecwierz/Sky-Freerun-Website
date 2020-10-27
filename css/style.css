@@ -9,6 +9,9 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   scroll-behavior: smooth; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Roboto", sans-serif;
@@ -230,6 +233,10 @@ body {
     line-height: 6.5rem;
     font-weight: 900;
     margin: 6rem 0 4rem -10rem; }
+    @media only screen and (max-width: 37.5em) {
+      .main__title {
+        font-size: 6rem;
+        line-height: 4rem; } }
   .main__description {
     width: 60%;
     margin-bottom: 2rem;
