@@ -257,6 +257,10 @@ body {
   position: relative;
   overflow: hidden;
   transition: .3s all ease-in-out; }
+  @media only screen and (max-width: 37.5em) {
+    .cta-btn {
+      width: 120px;
+      font-size: 1.8rem; } }
   .cta-btn:hover {
     padding: 1.5rem 2rem 2.5rem 2rem;
     transform: translateY(-5px);

@@ -271,6 +271,11 @@
     overflow: hidden;
     transition: .3s all ease-in-out;
 
+    @media only screen and (max-width: $bp-small) {
+        width: 120px;
+        font-size: 1.8rem;
+    }
+
     &:hover{
         padding: 1.5rem 2rem 2.5rem 2rem;
         transform: translateY(-5px);
