@@ -111,8 +111,15 @@
         height: 60px;
         transition: .3s height ease-in-out;
 
+        @media only screen and (max-width: $bp-small) {
+            height: 40px;
+        }
+
         &--scrolled{
             height: 40px;
+            @media only screen and (max-width: $bp-small) {
+                height: 30px;
+            }
         }
     }
 
@@ -158,6 +165,7 @@
 .main{
     display: flex;
     height:  calc(95vh - 8rem);
+    min-height: 400px;
     margin-top: 8rem;
 
     &__photo{
@@ -193,13 +201,31 @@
         z-index: 100;
         right: 50px;
         bottom: 150px;
+        @media only screen and (max-width: $bp-small) {
+            bottom: 85px;
+            height: 20px;
+            width: 20px;
+        }
     }
-
-
     .btn-prev{
         z-index: 100;
         right: 50px;
         bottom: 100px;
+        @media only screen and (max-width: $bp-small) {
+            bottom: 60px;
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+    .svg{
+        &-next, &-prev{
+        @media only screen and (max-width: $bp-small) {
+            height: 20px;
+            width: 20px;
+
+        }
+    }
     }
 
     &__img{
@@ -242,6 +268,10 @@
 
         @media only screen and (max-width: $bp-small) {
             font-size: 6rem;
+            line-height: 4.5rem;
+        }
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 5rem;
             line-height: 4rem;
         }
     }
@@ -253,6 +283,12 @@
         font-weight: $font-weight-light;
         font-size: 2.4rem;
         line-height: 3rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.8rem;
+            line-height: 2rem;
+        }
+
     }
 
 
