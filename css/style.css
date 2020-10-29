@@ -331,14 +331,25 @@ body {
   .about-us__text {
     margin: 5rem 0;
     grid-column: center-start / col-end 4;
+    grid-row: 1 / 2;
     padding: 4rem; }
+    @media only screen and (max-width: 37.5em) {
+      .about-us__text {
+        background-color: rgba(255, 255, 255, 0.4);
+        grid-column: full-start / col-end 6;
+        z-index: 200;
+        border-radius: 0 10rem 10rem 0; } }
   .about-us__image {
     grid-column: col-end 4 / full-end;
+    grid-row: 1 / 2;
     background-image: url(https://images.unsplash.com/photo-1527114652727-2598c326575f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80);
     background-size: cover;
     background-position: center;
     border-radius: 20rem 0px 0px 20rem;
     transition: all .3s; }
+    @media only screen and (max-width: 37.5em) {
+      .about-us__image {
+        z-index: 100; } }
     .about-us__image:hover {
       transform: scale(1.05);
       border: 0.5rem solid #F7BE10; }
