@@ -4,19 +4,31 @@
     &__text{
         margin: 5rem 0;
         grid-column: col-end 4 / center-end;
+        grid-row: 1 / 2;
         padding: 4rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @media only screen and (max-width: $bp-small) {
+            grid-column: col-end 2 / full-end;
+            z-index: 200;
+            background-color: rgba($color-white, 0.7);
+            border-radius: 10rem;
+        }
     }
 
     &__image{
         grid-column: full-start / col-end 4;
+        grid-row: 1 / 2;
         background-image: url("https://images.unsplash.com/photo-1577702310329-f7293ba86b58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2468&q=80");
         background-size: cover;
         background-position: center;
         border-radius: 0 20rem 20rem 0;
         transition: all .3s;
+        @media only screen and (max-width: $bp-small) {
+            grid-column: full-start / col-end 4;
+            z-index: 100;
+        }
 
         &:hover{
             transform: scale(1.05);

@@ -12,6 +12,12 @@
         letter-spacing: .36rem;
         line-height: 2rem;
         text-align: center;
-        color: rgba($color-gray-medium, .3)
+        color: rgba($color-gray-medium, .3);
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+            width: 90%;
+        }
     }
 }

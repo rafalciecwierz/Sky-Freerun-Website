@@ -7,19 +7,37 @@
         &--1{
             background-image: url("https://images.unsplash.com/photo-1596804597239-268d386ab66e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80");
             grid-column: full-start / col-start 2;
+            grid-row: 1 / 2;
             border-radius: 0 20rem 20rem 0;
+            @media only screen and (max-width: $bp-small) {
+                grid-column: full-start / col-start 4;
+                z-index: 100;
+            }
+
         }
         &--2{
             background-image: url("https://images.unsplash.com/photo-1569698045292-e14cb5393e79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
             grid-column: col-end 7 / full-end;
+            grid-row: 1 / 2;
             border-radius: 20rem 0 0 20rem;
+            @media only screen and (max-width: $bp-small) {
+                grid-column: col-end 5 / full-end;
+                z-index: 100;
+            }
         }
     }
 
     &__text {
         padding: 4rem;
         grid-column: col-start 2 / col-end 7;
+        grid-row: 1 / 2;
         display: flex;
         flex-direction: column;
+
+        @media only screen and (max-width: $bp-small) {
+            z-index: 200;
+            background-color: rgba($color-white, 0.7);
+            border-radius: 10rem;
+        }
     }
 }

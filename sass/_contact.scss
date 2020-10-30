@@ -12,11 +12,14 @@
     &__box{
         grid-column: center-start / col-end 4;
         padding: 6rem;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: full-start / full-end;
+        }
     }
 
 
     &__link{
-        width: 80%;
         padding: .5rem 1rem;
         margin: 1rem 0px;
         border-radius: 1rem;
@@ -25,6 +28,9 @@
         color: $color-white;
         text-decoration: none;
         transition: background-color .4s ease-in-out;
+        @media only screen and (max-width: $bp-smallest) {
+            background-color: rgba($color-black, 0.3);
+        }
         &:hover{
             background-color: rgba($color-white, 0.3);
         }
@@ -33,11 +39,22 @@
         }
     }
 
+    &__icon{
+        width: 40px;
+        @media only screen and (max-width: $bp-small) {
+            width: 30px
+        }
+    }
+
     &__text{
         margin-left: 1rem;
         letter-spacing: .3rem;
         font-size: 1.8rem;
         font-weight: $font-weight-light;
+        @media only screen and (max-width: $bp-small) {
+            letter-spacing: .3rem;
+            font-size: 1.4rem;
+        }
     }
 
 }
