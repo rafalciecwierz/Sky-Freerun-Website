@@ -9,6 +9,10 @@
     height: 85vh;
     align-items: center;
 
+    @media only screen and (max-width: $bp-small) {
+        border-radius: 15rem 15rem 0px 0px;
+    }
+
     &__box{
         grid-column: center-start / col-end 4;
         padding: 6rem;

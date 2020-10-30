@@ -28,6 +28,7 @@
         @media only screen and (max-width: $bp-small) {
             grid-column: full-start / col-end 4;
             z-index: 100;
+            border-radius: 0 15rem 15rem 0;
         }
 
         &:hover{

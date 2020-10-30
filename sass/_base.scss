@@ -20,6 +20,7 @@ $font-weight-normal: 400;
 $font-weight-bold: 700;
 $font-weight-black: 900;
 
+
 // RESPONSIVE BREAKPOINTS
 $bp-largest: 75em;   // 1200px
 $bp-large: 62.5em;   // 1000px
@@ -55,6 +56,9 @@ body {
 
 .w-80{
     width: 80%;
+    @media only screen and (max-width: $bp-small) {
+        width: 100%;
+    }
 }
 
 .mb-2{
@@ -66,6 +70,9 @@ body {
 
 .ta-right{
     text-align: right;
+    @media only screen and (max-width: $bp-small) {
+        text-align: left;
+    }
 }
 
 .grid-container{
@@ -86,6 +93,10 @@ body {
         }
         &--secondary{
             color: $color-secondary;
+            @media only screen and (max-width: $bp-small) {
+                font-size: 3.8rem;
+                line-height: 3.8rem;
+            }
         }
 
         &--white{
@@ -112,7 +123,9 @@ body {
         font-size: 1.4rem;
         line-height: 2.1rem;
         letter-spacing: 0.2rem;
-        margin-bottom: 2rem;
+        @media only screen and (max-width: $bp-small) {
+            letter-spacing: 0px;
+        }
 
         &--right{
             align-self: flex-end;
