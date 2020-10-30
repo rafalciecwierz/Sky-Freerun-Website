@@ -10,6 +10,7 @@
         flex-direction: column;
         justify-content: center;
         @media only screen and (max-width: $bp-small) {
+            padding: 6rem 4rem;
             grid-column: col-end 2 / full-end;
             z-index: 200;
             background-color: rgba($color-white, 0.7);

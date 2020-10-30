@@ -347,6 +347,7 @@ body {
     padding: 4rem; }
     @media only screen and (max-width: 37.5em) {
       .about-us__text {
+        padding: 6rem 4rem;
         background-color: rgba(255, 255, 255, 0.4);
         grid-column: full-start / col-end 6;
         z-index: 200;
@@ -418,6 +419,7 @@ body {
     justify-content: center; }
     @media only screen and (max-width: 37.5em) {
       .academy__text {
+        padding: 6rem 4rem;
         grid-column: col-end 2 / full-end;
         z-index: 200;
         background-color: rgba(255, 255, 255, 0.7);
@@ -451,7 +453,8 @@ body {
   align-items: center; }
   @media only screen and (max-width: 37.5em) {
     .contact {
-      border-radius: 15rem 15rem 0px 0px; } }
+      border-radius: 15rem 15rem 0px 0px;
+      height: 75vh; } }
   .contact__box {
     grid-column: center-start / col-end 4;
     padding: 6rem; }
