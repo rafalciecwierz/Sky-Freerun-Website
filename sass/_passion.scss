@@ -5,7 +5,7 @@
         background-size: cover;
         background-position:  center;
         &--1{
-            background-image: url("https://images.unsplash.com/photo-1596804597239-268d386ab66e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80");
+            background-image: url(../assets/images/passionleft.jpg);
             grid-column: full-start / col-start 2;
             grid-row: 1 / 2;
             border-radius: 0 20rem 20rem 0;
@@ -17,7 +17,7 @@
 
         }
         &--2{
-            background-image: url("https://images.unsplash.com/photo-1569698045292-e14cb5393e79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+            background-image: url(../assets/images/passionright.jpg);
             grid-column: col-end 7 / full-end;
             grid-row: 1 / 2;
             border-radius: 20rem 0 0 20rem;
