@@ -20,19 +20,25 @@
     &__image{
         grid-column: col-end 4 / full-end;
         grid-row: 1 / 2;
-        background-image: url(../assets/images/about2.jpg);
+        background-image: url(../assets/images/about.jpg);
         background-size: cover;
         background-position: center;
         border-radius: 20rem 0px 0px 20rem;
         transition: all .3s;
-
-        @media only screen and (max-width: $bp-small) {
-            z-index: 100;
-        }
-
         &:hover{
             transform: scale(1.05);
             border: .5rem solid $color-primary;
         }
+        @media only screen and (max-width: $bp-large) {
+            background-image: url(../assets/images/about-mobile.jpg);
+            z-index: 100;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            background-image: url(../assets/images/about-mobile2.jpg);
+            z-index: 100;
+        }
+
+
     }
 }

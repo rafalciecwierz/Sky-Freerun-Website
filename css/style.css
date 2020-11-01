@@ -248,11 +248,20 @@ body {
     background-size: cover;
     background-position: center; }
     .main__img--1 {
-      background-image: url(../assets/images/hed2.jpg); }
-    .main__img--2 {
       background-image: url(../assets/images/hed1.jpg); }
+      @media only screen and (max-width: 37.5em) {
+        .main__img--1 {
+          background-image: url(../assets/images/hed1-mobile.jpg); } }
+    .main__img--2 {
+      background-image: url(../assets/images/hed2.jpg); }
+      @media only screen and (max-width: 37.5em) {
+        .main__img--2 {
+          background-image: url(../assets/images/hed2-mobile.jpg); } }
     .main__img--3 {
       background-image: url(../assets/images/hed3.jpg); }
+      @media only screen and (max-width: 37.5em) {
+        .main__img--3 {
+          background-image: url(../assets/images/hed3-mobile.jpg); } }
   .main__info {
     width: 50%;
     display: flex;
@@ -353,17 +362,22 @@ body {
   .about-us__image {
     grid-column: col-end 4 / full-end;
     grid-row: 1 / 2;
-    background-image: url(../assets/images/about2.jpg);
+    background-image: url(../assets/images/about.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 20rem 0px 0px 20rem;
     transition: all .3s; }
-    @media only screen and (max-width: 37.5em) {
-      .about-us__image {
-        z-index: 100; } }
     .about-us__image:hover {
       transform: scale(1.05);
       border: 0.5rem solid #F7BE10; }
+    @media only screen and (max-width: 62.5em) {
+      .about-us__image {
+        background-image: url(../assets/images/about-mobile.jpg);
+        z-index: 100; } }
+    @media only screen and (max-width: 37.5em) {
+      .about-us__image {
+        background-image: url(../assets/images/about-mobile2.jpg);
+        z-index: 100; } }
 
 .passion {
   padding: 4rem 0;
@@ -380,7 +394,8 @@ body {
         .passion__image--1 {
           grid-column: full-start / col-start 4;
           z-index: 100;
-          border-radius: 0 15rem 15rem 0; } }
+          border-radius: 0 15rem 15rem 0;
+          background-image: url(../assets/images/passionleft-mobile.jpg); } }
     .passion__image--2 {
       background-image: url(../assets/images/passionright.jpg);
       grid-column: col-end 7 / full-end;
@@ -390,7 +405,8 @@ body {
         .passion__image--2 {
           grid-column: col-end 5 / full-end;
           z-index: 100;
-          border-radius: 15rem 0 0 15rem; } }
+          border-radius: 15rem 0 0 15rem;
+          background-image: url(../assets/images/passionright-mobile.jpg); } }
   .passion__text {
     margin: 4rem 0;
     padding: 4rem;
@@ -434,7 +450,8 @@ body {
       .academy__image {
         grid-column: full-start / col-end 4;
         z-index: 100;
-        border-radius: 0 15rem 15rem 0; } }
+        border-radius: 0 15rem 15rem 0;
+        background-image: url(../assets/images/academy-mobile.jpg); } }
     .academy__image:hover {
       transform: scale(1.05);
       border: 0.5rem solid #F7BE10; }
@@ -452,6 +469,7 @@ body {
   @media only screen and (max-width: 37.5em) {
     .contact {
       border-radius: 15rem 15rem 0px 0px;
+      background-image: url("../assets/images/contact-mobile.jpg");
       height: 75vh; } }
   .contact__box {
     grid-column: center-start / col-end 4;

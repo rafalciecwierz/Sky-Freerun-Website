@@ -13,6 +13,7 @@
                 grid-column: full-start / col-start 4;
                 z-index: 100;
                 border-radius: 0 15rem 15rem 0;
+                background-image: url(../assets/images/passionleft-mobile.jpg);
             }
 
         }
@@ -25,6 +26,7 @@
                 grid-column: col-end 5 / full-end;
                 z-index: 100;
                 border-radius: 15rem 0 0 15rem;
+                background-image: url(../assets/images/passionright-mobile.jpg);
             }
         }
     }

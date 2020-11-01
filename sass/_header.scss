@@ -236,14 +236,23 @@
         background-position: center;
 
         &--1{
-            background-image:  url(../assets/images/hed2.jpg);
+            background-image:  url(../assets/images/hed1.jpg);
+            @media only screen and (max-width: $bp-small) {
+                background-image:  url(../assets/images/hed1-mobile.jpg);
+            }
         }
 
         &--2{
-            background-image: url(../assets/images/hed1.jpg);
+            background-image: url(../assets/images/hed2.jpg);
+            @media only screen and (max-width: $bp-small) {
+                background-image:  url(../assets/images/hed2-mobile.jpg);
+            }
         }
         &--3{
             background-image:url(../assets/images/hed3.jpg);
+            @media only screen and (max-width: $bp-small) {
+                background-image:  url(../assets/images/hed3-mobile.jpg);
+            }
         }
     }
 
