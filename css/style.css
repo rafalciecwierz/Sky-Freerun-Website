@@ -446,12 +446,14 @@ body {
     background-position: center;
     border-radius: 0 20rem 20rem 0;
     transition: all .3s; }
+    @media only screen and (max-width: 50em) {
+      .academy__image {
+        background-image: url(../assets/images/academy-mobile.jpg); } }
     @media only screen and (max-width: 37.5em) {
       .academy__image {
         grid-column: full-start / col-end 4;
         z-index: 100;
-        border-radius: 0 15rem 15rem 0;
-        background-image: url(../assets/images/academy-mobile.jpg); } }
+        border-radius: 0 15rem 15rem 0; } }
     .academy__image:hover {
       transform: scale(1.05);
       border: 0.5rem solid #F7BE10; }

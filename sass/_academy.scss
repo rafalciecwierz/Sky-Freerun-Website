@@ -26,11 +26,14 @@
         background-position: center;
         border-radius: 0 20rem 20rem 0;
         transition: all .3s;
+        @media only screen and (max-width: $bp-medium) {
+            background-image: url(../assets/images/academy-mobile.jpg);
+        }
+
         @media only screen and (max-width: $bp-small) {
             grid-column: full-start / col-end 4;
             z-index: 100;
             border-radius: 0 15rem 15rem 0;
-            background-image: url(../assets/images/academy-mobile.jpg);
         }
 
         &:hover{
