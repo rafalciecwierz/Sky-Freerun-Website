@@ -19,6 +19,7 @@
     }
 
     &__image{
+        position: relative;
         grid-column: full-start / col-end 4;
         grid-row: 1 / 2;
         background-image: url(../assets/images/academy.jpg);
@@ -42,4 +43,21 @@
         }
     }
 
+    &__link-details{
+        position: absolute;
+        padding: 2rem 2rem 2rem 10rem;
+        border-radius: 20px;
+        font-size: 1.4rem;
+        color: $color-gray-darkest;
+        background-color: #fff;
+        bottom: 3rem;
+        left: 2rem;
+        font-weight: $font-weight-light;
+        transform: translateX(-150%);
+        transition: transform .3s ease-in-out;
+    }
+    &__image:hover > &__link-details{
+        transform: scale(1.0);
+        transform: translateX(-10rem);
+    }
 }
