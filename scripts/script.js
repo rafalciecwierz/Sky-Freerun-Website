@@ -11,7 +11,7 @@ window.addEventListener("load", function () {
 		},
 	});
 
-
+	//  Glider autoplay implementation
 	let autoplayDelay = 5000;
 
 	let timeout = -1;
@@ -45,7 +45,7 @@ window.addEventListener("load", function () {
 });
 
 
-//  Glider autoplay implementation
+
 
 
 
@@ -67,7 +67,7 @@ const hero = document.querySelector("body");
 const text = hero.querySelector(".main__title");
 const walk = 10; // px vale for shadow
 
-
+// h1 casting shadow animation effect
 function castShadow(e) {
 	const width = hero.offsetWidth;
     const height = hero.offsetHeight;
@@ -130,7 +130,7 @@ function handleClickClose(event){
 }
 function removeMenu(){
 	menu.classList.add("menu--hidden");
-	arrow.classList.add("navbar__menu__arrow--rotate");
+	arrow.classList.remove("navbar__menu__arrow--rotate");
 	window.removeEventListener("scroll", handleScroll);
 	window.removeEventListener("click", handleClickClose);
 	flag = true;
@@ -140,7 +140,7 @@ function handleClickMenu(event){
 	event.preventDefault();
 
 	menu.classList.remove("menu--hidden");
-	arrow.classList.remove("navbar__menu__arrow--rotate");
+	arrow.classList.toggle("navbar__menu__arrow--rotate");
 	window.addEventListener("scroll", handleScroll);
 	window.addEventListener("click", handleClickClose);
 }

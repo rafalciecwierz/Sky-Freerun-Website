@@ -197,6 +197,11 @@
         }
     }
 
+    .disabled {
+        background-color: #bbbbbb;
+        cursor:not-allowed;
+    }
+
     .btn-next{
         z-index: 100;
         right: 50px;
