@@ -1,6 +1,8 @@
 // Glider.js window constuction
 window.addEventListener("load", function () {
-	new Glider(document.querySelector(".glider"), {
+
+	const el = document.querySelector(".glider");
+	const glider = new Glider(el, {
 		slidesToShow: 1,
 		scrollLock: true,
 		arrows: {
@@ -8,7 +10,44 @@ window.addEventListener("load", function () {
 			next: ".btn-next",
 		},
 	});
+
+
+	let autoplayDelay = 5000;
+
+	let timeout = -1;
+	let hovering = false;
+	function startTimeout() {
+	clearTimeout(timeout);
+	timeout = setTimeout(() => {
+		if (!hovering)
+		glider.scrollItem((glider.slide + 1) % glider.slides.length);
+	}, autoplayDelay);
+	}
+
+	let animID = 0;
+	const isAnimating = () => glider.animate_id !== animID;
+	el.addEventListener("glider-animated", () => {
+	animID = glider.animate_id;
+	if (!hovering) startTimeout();
+	});
+
+	el.addEventListener("mouseover", () => {
+	hovering = true;
+	clearTimeout(timeout);
+	});
+
+	el.addEventListener("mouseout", () => {
+	hovering = false;
+	if (!isAnimating()) startTimeout();
+	});
+
+	startTimeout();
 });
+
+
+//  Glider autoplay implementation
+
+
 
 // When all thing will load
 
